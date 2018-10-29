@@ -2,6 +2,7 @@
 <html>
 <head>
     <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
 </head>
 <body>
 
@@ -29,7 +30,7 @@
 
        <br>
 
-       <input type="submit" value="sumar" name="operacion">
+       <input type="submit" value="sumar" class="btn btn-info" name="operacion">
        <input type="submit" value="restar" name="operacion">
        <input type="submit" value="multiplicar" name="operacion">
        <input type="submit" value="dividir" name="operacion">
@@ -40,7 +41,7 @@
    <h1>Resultado</h1>
    <br>
    <h1 style="color: red">{{$resultado}}</h1>
-   @else
+   @elseif(isset($resultado))
    <h1>Resultado</h1>
    <br>
    <h1>{{$resultado}}</h1>
@@ -55,7 +56,7 @@
 
 
 
-
+<script src="{{url ('assets/js/components/bootstrap.js') }}"></script>
 
 </body>
 </html>
